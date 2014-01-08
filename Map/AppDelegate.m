@@ -8,11 +8,15 @@
 
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "TestFlight.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // start of your application:didFinishLaunchingWithOptions // ...
+    [TestFlight takeOff:@"81b24f2e-94b4-4be1-bf5e-b8350f75440f"];
+    
     [GMSServices provideAPIKey:@"AIzaSyB90dTPm5EW6r3BNi-ErZRXnGEyEDCdWpA"];
     // Override point for customization after application launch.
     return YES;
