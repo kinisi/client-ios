@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A437B90F187DEB2300265940 /* FetchData.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B90E187DEB2300265940 /* FetchData.m */; };
+		A437B92B187E002B00265940 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = A437B914187E002B00265940 /* LICENSE.md */; };
+		A437B92C187E002B00265940 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B916187E002B00265940 /* NSDataAdditions.m */; };
+		A437B92D187E002B00265940 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B918187E002B00265940 /* NSStringAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A437B92E187E002B00265940 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A437B919187E002B00265940 /* README.md */; };
+		A437B92F187E002C00265940 /* XMLRPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B91C187E002B00265940 /* XMLRPCConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A437B930187E002C00265940 /* XMLRPCConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B91F187E002B00265940 /* XMLRPCConnectionManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A437B931187E002C00265940 /* XMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B921187E002B00265940 /* XMLRPCEncoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A437B932187E002C00265940 /* XMLRPCEventBasedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B923187E002B00265940 /* XMLRPCEventBasedParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A437B933187E002C00265940 /* XMLRPCEventBasedParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B925187E002B00265940 /* XMLRPCEventBasedParserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A437B934187E002C00265940 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B927187E002B00265940 /* XMLRPCRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A437B935187E002C00265940 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B929187E002B00265940 /* XMLRPCResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A486BEE9187DA0BD00650F82 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A486BEE8187DA0BD00650F82 /* AdSupport.framework */; };
 		A486BEF1187DA0F800650F82 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A486BEEB187DA0F800650F82 /* libTestFlight.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		A486BEF2187DA0F800650F82 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A486BEEC187DA0F800650F82 /* README.md */; };
@@ -53,6 +65,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A437B90D187DEB2300265940 /* FetchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchData.h; sourceTree = "<group>"; };
+		A437B90E187DEB2300265940 /* FetchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchData.m; sourceTree = "<group>"; };
+		A437B914187E002B00265940 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+		A437B915187E002B00265940 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		A437B916187E002B00265940 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		A437B917187E002B00265940 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		A437B918187E002B00265940 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		A437B919187E002B00265940 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A437B91A187E002B00265940 /* XMLRPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPC.h; sourceTree = "<group>"; };
+		A437B91B187E002B00265940 /* XMLRPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnection.h; sourceTree = "<group>"; };
+		A437B91C187E002B00265940 /* XMLRPCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCConnection.m; sourceTree = "<group>"; };
+		A437B91D187E002B00265940 /* XMLRPCConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnectionDelegate.h; sourceTree = "<group>"; };
+		A437B91E187E002B00265940 /* XMLRPCConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnectionManager.h; sourceTree = "<group>"; };
+		A437B91F187E002B00265940 /* XMLRPCConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCConnectionManager.m; sourceTree = "<group>"; };
+		A437B920187E002B00265940 /* XMLRPCEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEncoder.h; sourceTree = "<group>"; };
+		A437B921187E002B00265940 /* XMLRPCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEncoder.m; sourceTree = "<group>"; };
+		A437B922187E002B00265940 /* XMLRPCEventBasedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEventBasedParser.h; sourceTree = "<group>"; };
+		A437B923187E002B00265940 /* XMLRPCEventBasedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEventBasedParser.m; sourceTree = "<group>"; };
+		A437B924187E002B00265940 /* XMLRPCEventBasedParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEventBasedParserDelegate.h; sourceTree = "<group>"; };
+		A437B925187E002B00265940 /* XMLRPCEventBasedParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEventBasedParserDelegate.m; sourceTree = "<group>"; };
+		A437B926187E002B00265940 /* XMLRPCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCRequest.h; sourceTree = "<group>"; };
+		A437B927187E002B00265940 /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
+		A437B928187E002B00265940 /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
+		A437B929187E002B00265940 /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
 		A486BEE8187DA0BD00650F82 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		A486BEEB187DA0F800650F82 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		A486BEEC187DA0F800650F82 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -135,6 +171,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A437B912187E002B00265940 /* kdbdallas-xmlrpc-ios-f28a13cc16ae */ = {
+			isa = PBXGroup;
+			children = (
+				A437B914187E002B00265940 /* LICENSE.md */,
+				A437B915187E002B00265940 /* NSDataAdditions.h */,
+				A437B916187E002B00265940 /* NSDataAdditions.m */,
+				A437B917187E002B00265940 /* NSStringAdditions.h */,
+				A437B918187E002B00265940 /* NSStringAdditions.m */,
+				A437B919187E002B00265940 /* README.md */,
+				A437B91A187E002B00265940 /* XMLRPC.h */,
+				A437B91B187E002B00265940 /* XMLRPCConnection.h */,
+				A437B91C187E002B00265940 /* XMLRPCConnection.m */,
+				A437B91D187E002B00265940 /* XMLRPCConnectionDelegate.h */,
+				A437B91E187E002B00265940 /* XMLRPCConnectionManager.h */,
+				A437B91F187E002B00265940 /* XMLRPCConnectionManager.m */,
+				A437B920187E002B00265940 /* XMLRPCEncoder.h */,
+				A437B921187E002B00265940 /* XMLRPCEncoder.m */,
+				A437B922187E002B00265940 /* XMLRPCEventBasedParser.h */,
+				A437B923187E002B00265940 /* XMLRPCEventBasedParser.m */,
+				A437B924187E002B00265940 /* XMLRPCEventBasedParserDelegate.h */,
+				A437B925187E002B00265940 /* XMLRPCEventBasedParserDelegate.m */,
+				A437B926187E002B00265940 /* XMLRPCRequest.h */,
+				A437B927187E002B00265940 /* XMLRPCRequest.m */,
+				A437B928187E002B00265940 /* XMLRPCResponse.h */,
+				A437B929187E002B00265940 /* XMLRPCResponse.m */,
+			);
+			path = "kdbdallas-xmlrpc-ios-f28a13cc16ae";
+			sourceTree = "<group>";
+		};
 		A486BEEA187DA0F800650F82 /* TestFlightSDK2.2.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +261,7 @@
 		A4C2BC7B187D40DD0064FF72 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				A437B912187E002B00265940 /* kdbdallas-xmlrpc-ios-f28a13cc16ae */,
 				A486BEEA187DA0F800650F82 /* TestFlightSDK2.2.0 */,
 				A4C2BC84187D40DD0064FF72 /* AppDelegate.h */,
 				A4C2BC85187D40DD0064FF72 /* AppDelegate.m */,
@@ -205,6 +271,8 @@
 				A4C2BC8E187D40DD0064FF72 /* ViewController.m */,
 				A4C2BC90187D40DD0064FF72 /* Images.xcassets */,
 				A4C2BC7C187D40DD0064FF72 /* Supporting Files */,
+				A437B90D187DEB2300265940 /* FetchData.h */,
+				A437B90E187DEB2300265940 /* FetchData.m */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -315,6 +383,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A486BEF2187DA0F800650F82 /* README.md in Resources */,
+				A437B92B187E002B00265940 /* LICENSE.md in Resources */,
+				A437B92E187E002B00265940 /* README.md in Resources */,
 				A4C2BC8C187D40DD0064FF72 /* Main_iPad.storyboard in Resources */,
 				A4C2BC91187D40DD0064FF72 /* Images.xcassets in Resources */,
 				A4C2BC89187D40DD0064FF72 /* Main_iPhone.storyboard in Resources */,
@@ -340,8 +410,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C2BC8F187D40DD0064FF72 /* ViewController.m in Sources */,
+				A437B935187E002C00265940 /* XMLRPCResponse.m in Sources */,
+				A437B92C187E002B00265940 /* NSDataAdditions.m in Sources */,
+				A437B931187E002C00265940 /* XMLRPCEncoder.m in Sources */,
+				A437B933187E002C00265940 /* XMLRPCEventBasedParserDelegate.m in Sources */,
+				A437B932187E002C00265940 /* XMLRPCEventBasedParser.m in Sources */,
+				A437B934187E002C00265940 /* XMLRPCRequest.m in Sources */,
 				A4C2BC86187D40DD0064FF72 /* AppDelegate.m in Sources */,
+				A437B92D187E002B00265940 /* NSStringAdditions.m in Sources */,
+				A437B90F187DEB2300265940 /* FetchData.m in Sources */,
+				A437B930187E002C00265940 /* XMLRPCConnectionManager.m in Sources */,
 				A4C2BC82187D40DD0064FF72 /* main.m in Sources */,
+				A437B92F187E002C00265940 /* XMLRPCConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +496,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -494,6 +574,7 @@
 					/Users/tcarlson/Documents/prog/kinisi/Map/Map/TestFlightSDK2.2.0,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/tcarlson/Documents/prog/kinisi/Map/kdbdallas-xmlrpc-ios-f28a13cc16ae";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -517,6 +598,7 @@
 					/Users/tcarlson/Documents/prog/kinisi/Map/Map/TestFlightSDK2.2.0,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/tcarlson/Documents/prog/kinisi/Map/kdbdallas-xmlrpc-ios-f28a13cc16ae";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
