@@ -8,17 +8,20 @@
 
 #import "ViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "FetchData.h"
+
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController{
     GMSMapView *mapView_;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+
+
+- (void)viewDidLoadMap {
+    //[super viewDidLoad];
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:29.7
                                                             longitude:-82.38
                                                                  zoom:12];
@@ -45,6 +48,8 @@
     [path addLatitude:29.649036667 longitude:-82.358376667];
     [path addLatitude:29.649033333 longitude:-82.358375000];
     [path addLatitude:29.649028333 longitude:-82.358373333];
+    
+    /*
     [path addLatitude:29.649021667 longitude:-82.358383333];
     [path addLatitude:29.649026667 longitude:-82.358383333];
     [path addLatitude:29.649018333 longitude:-82.358383333];
@@ -167,6 +172,7 @@
     [path addLatitude:29.706145000 longitude:-82.394318333];
     [path addLatitude:29.705871667 longitude:-82.394418333];
     [path addLatitude:29.705846667 longitude:-82.394371667];
+     */
     
     GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
     polyline.strokeColor = [UIColor blueColor];
@@ -174,6 +180,61 @@
     polyline.map = mapView;
     
     self.view = mapView;
+}
+
+- (void)viewDidLoad {
+    //[viewDidLoadMap ];
+    [super viewDidLoad];
+    
+    
+    NSArray * latlongs = [FetchData fetch_static];
+    
+    if (latlongs == nil) {
+        [self viewDidLoadMap];
+        return;
+    }
+    
+    CGFloat maxminlat[2] = {360.,-360.};
+    CGFloat maxminlon[2] = {360.,-360.};
+    
+    GMSMutablePath *path = [GMSMutablePath path];
+    for (NSArray *ll in latlongs) {
+        
+        // FIXME the XMLRPC code should handle these conversions automatically
+        CGFloat lat = [((NSString*)ll[0]) doubleValue];
+        CGFloat lon = [((NSString*)ll[1]) doubleValue];
+        
+        [path addLatitude:lat longitude:lon];
+        
+        maxminlat[0] = MIN(maxminlat[0],lat);
+        maxminlat[1] = MAX(maxminlat[1],lat);
+        
+        maxminlon[0] = MIN(maxminlon[0],lon);
+        maxminlon[1] = MAX(maxminlon[1],lon);
+    }
+    
+    NSLog(@"max/min lat %f %f", maxminlat[0], maxminlat[1]);
+    NSLog(@"max/min lon %f %f", maxminlon[0], maxminlon[1]);
+    NSLog(@"cameraLat/Lon %f %f", ((maxminlat[1]+maxminlat[0])/2.), ((maxminlon[1]+maxminlon[0])/2.));
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: ((maxminlat[1]+maxminlat[0])/2.)
+                                                            longitude: ((maxminlon[1]+maxminlon[0])/2.)
+                                                                 zoom:6];
+    GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    
+    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+    polyline.strokeColor = [UIColor blueColor];
+    polyline.strokeWidth = 5.f;
+    polyline.map = mapView;
+    
+    self.view = mapView;
+
+    CLLocationCoordinate2D minmin = CLLocationCoordinate2DMake(maxminlat[0], maxminlon[0]);
+    CLLocationCoordinate2D maxmax = CLLocationCoordinate2DMake(maxminlat[1], maxminlon[1]);
+    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:minmin coordinate:maxmax];
+    GMSCameraPosition *camera2 = [mapView cameraForBounds:bounds insets:UIEdgeInsetsZero];
+    mapView.camera = camera2;
+    
 }
 
 - (void)viewDidLoad2 {

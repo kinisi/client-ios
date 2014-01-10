@@ -25,5 +25,7 @@
 @interface NSData (NSDataAdditions)
 
 + (NSData *)base64DataFromString: (NSString *)string;
+// From: http://stackoverflow.com/questions/7520615/how-to-convert-an-nsdata-into-an-nsstring-hex-string
+- (NSString*)hexRepresentationWithSpaces_AS:(BOOL)spaces;
 
 @end

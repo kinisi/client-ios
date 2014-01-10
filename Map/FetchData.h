@@ -10,6 +10,6 @@
 
 @interface FetchData : NSObject
 
-+ (void)fetch:(NSString *)applicationToken;
++ (NSArray *)fetch_static;
 
 @end

@@ -42,6 +42,7 @@ static char base64EncodingTable[64] = {
 }
 
 + (NSString *)base64StringFromData: (NSData *)data length: (int)length {
+    BOOL addNewlines = false;
     unsigned long ixtext, lentext;
     long ctremaining;
     unsigned char input[3], output[4];
@@ -105,11 +106,11 @@ static char base64EncodingTable[64] = {
         ixtext += 3;
         charsonline += 4;
         
-        if ((ixtext % 90) == 0) {
+        if (addNewlines && ((ixtext % 90) == 0)) {
             [result appendString: @"\n"];
         }
         
-        if (length > 0) {
+        if (addNewlines && (length > 0)) {
             if (charsonline >= length) {
                 charsonline = 0;
                 

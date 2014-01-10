@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A437B90F187DEB2300265940 /* FetchData.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B90E187DEB2300265940 /* FetchData.m */; };
+		A437B90F187DEB2300265940 /* FetchData.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B90E187DEB2300265940 /* FetchData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A437B92B187E002B00265940 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = A437B914187E002B00265940 /* LICENSE.md */; };
-		A437B92C187E002B00265940 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B916187E002B00265940 /* NSDataAdditions.m */; };
+		A437B92C187E002B00265940 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B916187E002B00265940 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A437B92D187E002B00265940 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B918187E002B00265940 /* NSStringAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A437B92E187E002B00265940 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A437B919187E002B00265940 /* README.md */; };
 		A437B92F187E002C00265940 /* XMLRPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B91C187E002B00265940 /* XMLRPCConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -23,6 +23,7 @@
 		A486BEF1187DA0F800650F82 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A486BEEB187DA0F800650F82 /* libTestFlight.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		A486BEF2187DA0F800650F82 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A486BEEC187DA0F800650F82 /* README.md */; };
 		A486BEF3187DA0F800650F82 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = A486BEED187DA0F800650F82 /* release_notes.md */; };
+		A4939392187F025700E2AFBB /* HMAC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4939391187F025700E2AFBB /* HMAC.m */; };
 		A4C2BC76187D40DD0064FF72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C2BC75187D40DD0064FF72 /* Foundation.framework */; };
 		A4C2BC78187D40DD0064FF72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C2BC77187D40DD0064FF72 /* CoreGraphics.framework */; };
 		A4C2BC7A187D40DD0064FF72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C2BC79187D40DD0064FF72 /* UIKit.framework */; };
@@ -96,6 +97,9 @@
 		A486BEEE187DA0F800650F82 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
 		A486BEEF187DA0F800650F82 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
 		A486BEF0187DA0F800650F82 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		A4939390187F025700E2AFBB /* HMAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAC.h; sourceTree = "<group>"; };
+		A4939391187F025700E2AFBB /* HMAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAC.m; sourceTree = "<group>"; };
+		A4939393187F044800E2AFBB /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = usr/lib/system/libcommonCrypto.dylib; sourceTree = SDKROOT; };
 		A4C2BC72187D40DD0064FF72 /* Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C2BC75187D40DD0064FF72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4C2BC77187D40DD0064FF72 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -235,6 +239,7 @@
 		A4C2BC74187D40DD0064FF72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4939393187F044800E2AFBB /* libcommonCrypto.dylib */,
 				A486BEE8187DA0BD00650F82 /* AdSupport.framework */,
 				A4C2BCCB187D432C0064FF72 /* SystemConfiguration.framework */,
 				A4C2BCC9187D43250064FF72 /* QuartzCore.framework */,
@@ -273,6 +278,8 @@
 				A4C2BC7C187D40DD0064FF72 /* Supporting Files */,
 				A437B90D187DEB2300265940 /* FetchData.h */,
 				A437B90E187DEB2300265940 /* FetchData.m */,
+				A4939390187F025700E2AFBB /* HMAC.h */,
+				A4939391187F025700E2AFBB /* HMAC.m */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -415,6 +422,7 @@
 				A437B931187E002C00265940 /* XMLRPCEncoder.m in Sources */,
 				A437B933187E002C00265940 /* XMLRPCEventBasedParserDelegate.m in Sources */,
 				A437B932187E002C00265940 /* XMLRPCEventBasedParser.m in Sources */,
+				A4939392187F025700E2AFBB /* HMAC.m in Sources */,
 				A437B934187E002C00265940 /* XMLRPCRequest.m in Sources */,
 				A4C2BC86187D40DD0064FF72 /* AppDelegate.m in Sources */,
 				A437B92D187E002B00265940 /* NSStringAdditions.m in Sources */,
@@ -560,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tcarlson/Downloads/GoogleMaps-iOS-1.6.1",
@@ -572,8 +581,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/tcarlson/Documents/prog/kinisi/Map/Map/TestFlightSDK2.2.0,
+					"$(SDKROOT)/usr/lib/system",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/tcarlson/Documents/prog/kinisi/Map/kdbdallas-xmlrpc-ios-f28a13cc16ae";
 				WRAPPER_EXTENSION = app;
 			};
@@ -584,6 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tcarlson/Downloads/GoogleMaps-iOS-1.6.1",
@@ -596,8 +608,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/tcarlson/Documents/prog/kinisi/Map/Map/TestFlightSDK2.2.0,
+					"$(SDKROOT)/usr/lib/system",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/tcarlson/Documents/prog/kinisi/Map/kdbdallas-xmlrpc-ios-f28a13cc16ae";
 				WRAPPER_EXTENSION = app;
 			};

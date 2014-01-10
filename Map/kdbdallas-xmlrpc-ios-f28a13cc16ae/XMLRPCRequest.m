@@ -65,6 +65,22 @@
 
 #pragma mark -
 
+- (void)setHeader: (NSString *)headerName withValue: (NSString *)value {
+    //NSLog(@"setHeader called [%@] [%@]\n", headerName, value);
+    if (![self getHeader: headerName]) {
+        [myRequest addValue: value forHTTPHeaderField: headerName];
+    } else {
+        [myRequest setValue: value forHTTPHeaderField: headerName];
+    }
+}
+
+- (NSString *)getHeader: (NSString*)headerName {
+    return [myRequest valueForHTTPHeaderField: headerName];
+}
+
+
+#pragma mark -
+
 - (void)setMethod: (NSString *)method {
     [myXMLEncoder setMethod: method withParameters: nil];
 }

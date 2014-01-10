@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "TestFlight.h"
+#import "FetchData.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,9 @@
     
     [GMSServices provideAPIKey:@"AIzaSyB90dTPm5EW6r3BNi-ErZRXnGEyEDCdWpA"];
     // Override point for customization after application launch.
+    
+    //[FetchData fetch];
+
     return YES;
 }
 							

@@ -45,6 +45,12 @@
 
 #pragma mark -
 
+- (void)setHeader: (NSString *)headerName withValue: (NSString *)value;
+
+- (NSString *)getHeader: (NSString*)headerName;
+
+#pragma mark -
+
 - (void)setMethod: (NSString *)method;
 
 - (void)setMethod: (NSString *)method withParameter: (id)parameter;
