@@ -32,6 +32,8 @@
     [defaults registerDefaults:appDefaults];
     [defaults synchronize];
 
+    self.locationMonitor = [[LocationMonitor alloc] init];
+    
     return YES;
 }
 							
