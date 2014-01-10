@@ -218,22 +218,30 @@
     NSLog(@"cameraLat/Lon %f %f", ((maxminlat[1]+maxminlat[0])/2.), ((maxminlon[1]+maxminlon[0])/2.));
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: ((maxminlat[1]+maxminlat[0])/2.)
-                                                            longitude: ((maxminlon[1]+maxminlon[0])/2.)
-                                                                 zoom:6];
+                                                           longitude: ((maxminlon[1]+maxminlon[0])/2.)
+                                                                       zoom:13];
     GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     
     GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
     polyline.strokeColor = [UIColor blueColor];
     polyline.strokeWidth = 5.f;
     polyline.map = mapView;
-    
-    self.view = mapView;
 
+    self.view = mapView;
+    
     CLLocationCoordinate2D minmin = CLLocationCoordinate2DMake(maxminlat[0], maxminlon[0]);
     CLLocationCoordinate2D maxmax = CLLocationCoordinate2DMake(maxminlat[1], maxminlon[1]);
+    NSLog(@"%f %f ; %f %f", minmin.latitude, minmin.longitude, maxmax.latitude, maxmax.longitude);
+    
     GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:minmin coordinate:maxmax];
-    GMSCameraPosition *camera2 = [mapView cameraForBounds:bounds insets:UIEdgeInsetsZero];
-    mapView.camera = camera2;
+
+    GMSCameraUpdate *update = [GMSCameraUpdate fitBounds:bounds
+                                             withPadding:500.0f];
+    [mapView_ moveCamera:update];
+    
+    //GMSCameraPosition *camera2 = [mapView_ cameraForBounds:bounds insets:UIEdgeInsetsZero];
+    //mapView_.camera = camera2;
+
     
 }
 
