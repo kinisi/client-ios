@@ -18,6 +18,16 @@
 
 + (NSArray *)fetch_static
 {
+
+    
+    NSString *kFirstNameKey= @"deviceid_preference";
+    
+    //for reading default value for Terminal
+    NSString *deviceId = [[NSUserDefaults standardUserDefaults] stringForKey:kFirstNameKey];
+    //- See more at: http://www.ecanarys.com/blog-entry/implementing-ios-setting-bundle#sthash.GreXbASL.dpuf
+    NSLog(@"pref: %@", deviceId);
+    
+    
     //NSURL *URL = [NSURL URLWithString: @"http://127.0.0.1:8080/"];
     NSURL *URL = [NSURL URLWithString: @"http://162.242.218.22:8081/"];
     
@@ -27,7 +37,9 @@
     //[request setMethod: @"echo" withParameter: @"Hello World!"];
     //[request setMethod: @"get_static_data"];
     //[request setMethod: @"get_all_by_deviceid" withParameter: @"zmenegakis561412"];
-    [request setMethod: @"get_all_by_deviceid" withParameter: @"zmenegakis200489"];
+    //[request setMethod: @"get_all_by_deviceid" withParameter: @"zmenegakis200489"];
+    [request setMethod: @"get_all_by_deviceid" withParameter: deviceId];
+
     
     NSString *hash = [HMAC hash_sha512:[request body]];
     //NSLog(@"hash = %@", hash);

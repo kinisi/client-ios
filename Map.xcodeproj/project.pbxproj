@@ -19,6 +19,7 @@
 		A437B933187E002C00265940 /* XMLRPCEventBasedParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B925187E002B00265940 /* XMLRPCEventBasedParserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A437B934187E002C00265940 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B927187E002B00265940 /* XMLRPCRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A437B935187E002C00265940 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B929187E002B00265940 /* XMLRPCResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A47EB85E188044B700432228 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A47EB85D188044B700432228 /* Settings.bundle */; };
 		A486BEE9187DA0BD00650F82 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A486BEE8187DA0BD00650F82 /* AdSupport.framework */; };
 		A486BEF1187DA0F800650F82 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A486BEEB187DA0F800650F82 /* libTestFlight.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		A486BEF2187DA0F800650F82 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A486BEEC187DA0F800650F82 /* README.md */; };
@@ -90,6 +91,7 @@
 		A437B927187E002B00265940 /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
 		A437B928187E002B00265940 /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
 		A437B929187E002B00265940 /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+		A47EB85D188044B700432228 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A486BEE8187DA0BD00650F82 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		A486BEEB187DA0F800650F82 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		A486BEEC187DA0F800650F82 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		A4C2BC69187D40DD0064FF72 = {
 			isa = PBXGroup;
 			children = (
+				A47EB85D188044B700432228 /* Settings.bundle */,
 				A4C2BC7B187D40DD0064FF72 /* Map */,
 				A4C2BC9D187D40DD0064FF72 /* MapTests */,
 				A4C2BC74187D40DD0064FF72 /* Frameworks */,
@@ -391,6 +394,7 @@
 			files = (
 				A486BEF2187DA0F800650F82 /* README.md in Resources */,
 				A437B92B187E002B00265940 /* LICENSE.md in Resources */,
+				A47EB85E188044B700432228 /* Settings.bundle in Resources */,
 				A437B92E187E002B00265940 /* README.md in Resources */,
 				A4C2BC8C187D40DD0064FF72 /* Main_iPad.storyboard in Resources */,
 				A4C2BC91187D40DD0064FF72 /* Images.xcassets in Resources */,

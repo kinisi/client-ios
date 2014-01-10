@@ -24,7 +24,7 @@
     //[super viewDidLoad];
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:29.7
                                                             longitude:-82.38
-                                                                 zoom:12];
+                                                                 zoom:13];
     GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     
     GMSMutablePath *path = [GMSMutablePath path];
@@ -186,8 +186,15 @@
     //[viewDidLoadMap ];
     [super viewDidLoad];
     
+    BOOL accessNetwork = [[NSUserDefaults standardUserDefaults] boolForKey:@"access_enabled_preference"];
+
+    NSLog(@"pref: %hhd", accessNetwork);
     
-    NSArray * latlongs = [FetchData fetch_static];
+    NSArray * latlongs = nil;
+    
+    if (accessNetwork) {
+       latlongs = [FetchData fetch_static];
+    }
     
     if (latlongs == nil) {
         [self viewDidLoadMap];

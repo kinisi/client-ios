@@ -21,7 +21,16 @@
     [GMSServices provideAPIKey:@"AIzaSyB90dTPm5EW6r3BNi-ErZRXnGEyEDCdWpA"];
     // Override point for customization after application launch.
     
-    //[FetchData fetch];
+    // From: http://stackoverflow.com/questions/6774491/unable-to-read-values-from-settings-bundle
+    // Set the application defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 @"zmenegakis200489", @"deviceid_preference",
+                                 [NSNumber numberWithBool:YES], @"access_enabled_preference",
+                                 nil];
+    //NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"zmenegakis200489" forKey:@"deviceid_preference"];
+    [defaults registerDefaults:appDefaults];
+    [defaults synchronize];
 
     return YES;
 }
