@@ -9,16 +9,22 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface LocationMonitor : NSObject <CLLocationManagerDelegate> {
+@interface LocationMonitor : NSObject <CLLocationManagerDelegate>
+
+/*{
 
     CLLocationManager *locationManager;
+    NSManagedObjectContext *managedObjectContext;
     
-}
+}*/
+
+-(id)initWithMoc: (NSManagedObjectContext*) moc;
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error;
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationMonitor.h"
 
 @interface ViewController : UIViewController
+
+@property (strong, nonatomic) LocationMonitor *locationMonitor;
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
 @end

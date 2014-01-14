@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "FetchData.h"
+#import "LocationMonitor.h"
 
 
 @interface ViewController ()
@@ -18,7 +19,8 @@
     GMSMapView *mapView_;
 }
 
-
+@synthesize locationMonitor;
+@synthesize managedObjectContext;
 
 - (void)viewDidLoadMap {
     //[super viewDidLoad];
@@ -185,6 +187,11 @@
 - (void)viewDidLoad {
     //[viewDidLoadMap ];
     [super viewDidLoad];
+    
+    //self.view.window.rootViewController = self;
+//    _window.rootViewController = self;
+    
+    self.locationMonitor = [[LocationMonitor alloc] initWithMoc:managedObjectContext];
     
     BOOL accessNetwork = [[NSUserDefaults standardUserDefaults] boolForKey:@"access_enabled_preference"];
 

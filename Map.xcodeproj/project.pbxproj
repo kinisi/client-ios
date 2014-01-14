@@ -19,8 +19,10 @@
 		A437B933187E002C00265940 /* XMLRPCEventBasedParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B925187E002B00265940 /* XMLRPCEventBasedParserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A437B934187E002C00265940 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B927187E002B00265940 /* XMLRPCRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A437B935187E002C00265940 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A437B929187E002B00265940 /* XMLRPCResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A454F3EB18809ED500DD0187 /* LocationEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A454F3EA18809ED500DD0187 /* LocationEntry.m */; };
 		A47EB85E188044B700432228 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A47EB85D188044B700432228 /* Settings.bundle */; };
 		A47EB8611880910400432228 /* LocationMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A47EB8601880910400432228 /* LocationMonitor.m */; };
+		A47EB86418809C8600432228 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47EB86218809C8600432228 /* Model.xcdatamodeld */; };
 		A486BEE9187DA0BD00650F82 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A486BEE8187DA0BD00650F82 /* AdSupport.framework */; };
 		A486BEF1187DA0F800650F82 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A486BEEB187DA0F800650F82 /* libTestFlight.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		A486BEF2187DA0F800650F82 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A486BEEC187DA0F800650F82 /* README.md */; };
@@ -92,9 +94,12 @@
 		A437B927187E002B00265940 /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
 		A437B928187E002B00265940 /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
 		A437B929187E002B00265940 /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+		A454F3E918809ED500DD0187 /* LocationEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationEntry.h; sourceTree = "<group>"; };
+		A454F3EA18809ED500DD0187 /* LocationEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationEntry.m; sourceTree = "<group>"; };
 		A47EB85D188044B700432228 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A47EB85F1880910400432228 /* LocationMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMonitor.h; sourceTree = "<group>"; };
 		A47EB8601880910400432228 /* LocationMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMonitor.m; sourceTree = "<group>"; };
+		A47EB86318809C8600432228 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A486BEE8187DA0BD00650F82 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		A486BEEB187DA0F800650F82 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		A486BEEC187DA0F800650F82 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -225,6 +230,7 @@
 		A4C2BC69187D40DD0064FF72 = {
 			isa = PBXGroup;
 			children = (
+				A47EB86218809C8600432228 /* Model.xcdatamodeld */,
 				A47EB85D188044B700432228 /* Settings.bundle */,
 				A4C2BC7B187D40DD0064FF72 /* Map */,
 				A4C2BC9D187D40DD0064FF72 /* MapTests */,
@@ -288,6 +294,8 @@
 				A4939391187F025700E2AFBB /* HMAC.m */,
 				A47EB85F1880910400432228 /* LocationMonitor.h */,
 				A47EB8601880910400432228 /* LocationMonitor.m */,
+				A454F3E918809ED500DD0187 /* LocationEntry.h */,
+				A454F3EA18809ED500DD0187 /* LocationEntry.m */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -436,10 +444,12 @@
 				A437B934187E002C00265940 /* XMLRPCRequest.m in Sources */,
 				A4C2BC86187D40DD0064FF72 /* AppDelegate.m in Sources */,
 				A437B92D187E002B00265940 /* NSStringAdditions.m in Sources */,
+				A47EB86418809C8600432228 /* Model.xcdatamodeld in Sources */,
 				A437B90F187DEB2300265940 /* FetchData.m in Sources */,
 				A437B930187E002C00265940 /* XMLRPCConnectionManager.m in Sources */,
 				A4C2BC82187D40DD0064FF72 /* main.m in Sources */,
 				A437B92F187E002C00265940 /* XMLRPCConnection.m in Sources */,
+				A454F3EB18809ED500DD0187 /* LocationEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +710,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A47EB86218809C8600432228 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A47EB86318809C8600432228 /* Model.xcdatamodel */,
+			);
+			currentVersion = A47EB86318809C8600432228 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A4C2BC6A187D40DD0064FF72 /* Project object */;
 }

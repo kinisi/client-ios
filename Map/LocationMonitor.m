@@ -7,15 +7,23 @@
 //
 
 #import "LocationMonitor.h"
+#import "LocationEntry.h"
 
 @implementation LocationMonitor
 
 @synthesize locationManager;
+@synthesize managedObjectContext;
 
--(id)init {
+-(id)initWithMoc: (NSManagedObjectContext*) moc {
     if ( self = [super init] ) {
+        //FIXME .. is this needed?
+        //self.managedObjectContext = [[NSManagedObjectContext alloc] init];
+        //if (managedObjectContext == nil)
+        //{
+        //self.managedObjectContext = [[[UIApplication sharedApplication] delegate]managedObjectContext];
         // setup the location manager
         self.locationManager = [[CLLocationManager alloc] init];
+        self.managedObjectContext = moc;
         // setup delegate callbacks
         locationManager.delegate = self;
         //Therefore, if your application needs to receive location events while in the background, it must include the
@@ -29,6 +37,27 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     for (CLLocation *loc in locations) {
         NSLog(@"Loc: %@", loc);
+        
+        NSManagedObjectContext *context = [self managedObjectContext];
+
+        NSLog(@"Context: %@",context);
+        NSLog(@"PS Coord : %@",context.persistentStoreCoordinator);
+        NSLog(@"MOM : %@", context.persistentStoreCoordinator.managedObjectModel);
+        NSLog(@"Entities : %@",[[context.persistentStoreCoordinator.managedObjectModel entities] valueForKey:@"name"]);
+        
+        NSLog(@"moc = %@", context);
+        LocationEntry *cdLoc = (LocationEntry *) [NSEntityDescription insertNewObjectForEntityForName:@"LocationEntry" inManagedObjectContext:context];
+        [cdLoc setDate:[NSDate date]];
+        [cdLoc setLatitude:[NSNumber numberWithDouble:loc.coordinate.latitude]];
+        [cdLoc setLongitude:[NSNumber numberWithDouble:loc.coordinate.longitude]];
+        
+        NSError *error;
+        if(![managedObjectContext save:&error]){
+            // Error if we can't save
+            NSLog(@"Unable to save to managedObjectContext (CoreData)");
+        } else {
+            NSLog(@"Saved CoreData");
+        }
     }
 }
 
